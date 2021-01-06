@@ -2,10 +2,12 @@ import { Item } from './item.model'
 
 export const getItem = (req, res) => {
   console.log('placeholder for get')
+  res.send({ message: 'placeholder' })
   // res.status(200).json({ data: req.user })
 }
 
 export const updateItem = async (req, res) => {
+  res.send({ message: 'placeholder' })
   console.log('placeholder for put')
   /* try {
       const user = await User.findByIdAndUpdate(req.user._id, req.body, {
@@ -22,10 +24,12 @@ export const updateItem = async (req, res) => {
 }
 
 export const addItem = (req, res) => {
+  res.send({ message: 'placeholder' })
   console.log('placeholder for post')
 }
 
 export const removeItem = (req, res) => {
+  res.send({ message: 'placeholder' })
   console.log('placeholder for delete')
 }
 
