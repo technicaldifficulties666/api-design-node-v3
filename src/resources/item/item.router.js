@@ -2,13 +2,13 @@ import { Router } from 'express'
 import { getItem, updateItem, removeItem, addItem } from './item.controllers'
 const router = Router()
 
-// /
+// /api/item
 router
   .route('/')
   .get(getItem)
   .post(addItem)
 
-// /:id
+// /api/item/:id
 router
   .route('/:id')
   .get(getItem)
