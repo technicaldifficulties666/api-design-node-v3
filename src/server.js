@@ -4,7 +4,9 @@ import morgan from 'morgan'
 import config from './config'
 import cors from 'cors'
 import { connect } from './utils/db'
-import { router } from './resources/item/item.router'
+import { router as itemRouter } from './resources/item/item.router'
+import { router as listRouter } from './resources/list/list.router'
+import { router as userRouter } from './resources/user/user.router'
 export const app = express()
 
 // middleware
@@ -16,7 +18,9 @@ app.use(urlencoded({ extended: true }))
 app.use(morgan('dev'))
 
 // mount item router
-app.use(router)
+app.use('/api/item', itemRouter)
+app.use('/api/list', listRouter)
+app.use('/api/user', userRouter)
 
 // route controllers
 // READ
