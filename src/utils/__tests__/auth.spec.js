@@ -42,7 +42,7 @@ describe('Authentication:', () => {
       await signup(req, res)
     })
 
-    test('creates user and and sends new token from user', async () => {
+    test('creates user and sends new token from user', async () => {
       expect.assertions(2)
 
       const req = { body: { email: 'hello@hello.com', password: '293jssh' } }
@@ -213,5 +213,5 @@ describe('Authentication:', () => {
       expect(req.user._id.toString()).toBe(user._id.toString())
       expect(req.user).not.toHaveProperty('password')
     })
-  })
+  }) 
 })
